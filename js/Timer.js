@@ -22,11 +22,11 @@ export default class Timer{
         })
 
         this.el.reset.addEventListener("click", () => {
-            const inputMinutes = prompt("Enter the number of minutes: ");
+            var inputSeconds = prompt("Enter the number of seconds: ");
             
-            if(inputMinutes <= 60){
+            if(inputSeconds <= 6000){
                 this.stop();
-                this.remainingSeconds = inputMinutes*60;
+                this.remainingSeconds = inputSeconds;
                 this.updateInterface();
             }
         })
